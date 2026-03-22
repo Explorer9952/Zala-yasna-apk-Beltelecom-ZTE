@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zte.iptvclient.android.zala"
+    android:versionCode="43"
+    android:versionName="2.2.43.1">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="30" />
+
+    <queries>
+        <package android:name="com.facebook.katana" />
+        <package android:name="com.vkontakte.android" />
+        <package android:name="com.viber.voip" />
+    </queries>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:glEsVersion="0x00020000" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.zte.iptvclient.android.common.BaseApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="com.zte.iptvclient.android.common.Splashscreen"
+            android:configChanges="fontScale|layoutDirection|screenSize|orientation|keyboardHidden|locale"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified"
+            android:taskAffinity="com.zte.iptvclient.android.at.task"
+            android:theme="@style/Theme.AppStartBackground">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="127.0.0.1" android:scheme="zteottby" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.zte.iptvclient.android.mobile.login.activity.LoginActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:taskAffinity="com.zte.iptvclient.android.at.task" />
+
+        <activity
+            android:name="com.zte.iptvclient.android.mobile.launcher.activity.LauncherPageActivity"
+            android:configChanges="fontScale|screenSize|orientation|keyboardHidden|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:taskAffinity="com.zte.iptvclient.android.at.task"
+            android:theme="@style/Theme.Fullscreen"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name="com.zte.iptvclient.android.mobile.MainActivity"
+            android:configChanges="fontScale|screenSize|orientation|keyboardHidden|locale"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:taskAffinity="com.zte.iptvclient.android.at.task"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
+            <meta-data android:name="android.notch_support" android:value="true" />
+        </activity>
+
+        <service
+            android:name="com.zte.iptvclient.android.common.update.UpdateService"
+            android:exported="false" />
+
+        <service
+            android:name="com.zte.iptvclient.android.common.function.service.UpdateUsertokenService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.zte.iptvclient.android.common.function.service.UpdateUsertokenService" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.zte.iptvclient.android.common.reminder.TvReminderManager"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.zte.iptvclient.android.common.reminder.TvReminderManager" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.zte.iptvclient.android.common.function.service.PushMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.zte.iptvclient.android.common.function.service.PushMessageService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.zte.iptvclient.android.common.function.receiver.LanguageBoradcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.zte.iptvclient.android.common.function.receiver.AlarmReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.vk.api.sdk.internal.VKInitProvider"
+            android:authorities="com.zte.iptvclient.android.zala.VKInitProvider"
+            android:exported="false" />
+
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="com.zte.iptvclient.android.zala.FacebookInitProvider"
+            android:exported="false" />
+
+        <activity android:name="com.zte.iptvclient.android.common.player.activity.VOPlayerActivity" android:screenOrientation="landscape" android:launchMode="singleTop" android:configChanges="fontScale|screenSize|orientation|keyboardHidden" />
+        <activity android:name="com.zte.iptvclient.android.mobile.HostActivity" android:theme="@style/hostTheme" android:screenOrientation="behind" android:configChanges="fontScale|screenSize|orientation|navigation|keyboardHidden|locale" />
+        <activity android:name="com.vk.sdk.VKServiceActivity" android:theme="@style/VK.Transparent" />
+        <activity android:name="com.facebook.CustomTabMainActivity" />
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="cct.com.zte.iptvclient.android.zala" android:scheme="fbconnect" />
+            </intent-filter>
+        </activity>
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebookid" />
+        <meta-data android:name="io.fabric.ApiKey" android:value="d2dde29ac950adb002416cd18e7383c0b5489ea7" />
+    </application>
+</manifest>

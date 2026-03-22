@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_child_title_container"
+        android:background="@color/mine_separation_line_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:textColor="@color/parental_control_background"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/watch_time_period_txt"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
+</LinearLayout>

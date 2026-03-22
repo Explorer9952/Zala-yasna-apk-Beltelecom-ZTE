@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/rl_channel_item"
+    android:layout_width="match_parent"
+    android:layout_height="68dp">
+    <RelativeLayout
+        android:id="@+id/rl_img_container"
+        android:background="@color/channel_sort_bg"
+        android:layout_width="@dimen/tv_icon_pad_width"
+        android:layout_height="@dimen/tv_icon_pad_height"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="11dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/infImgTvItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imgTvLock"
+        android:layout_width="10.8dp"
+        android:layout_height="13.2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/icon_lock"
+        android:layout_toRightOf="@+id/rl_img_container"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:id="@+id/channel_left_line"
+        android:background="@color/tv_channel_leftline_color"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        skin:enable="true"/>
+    <View
+        android:id="@+id/divider_line"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:layout_alignParentBottom="true"
+        skin:enable="true"/>
+</RelativeLayout>

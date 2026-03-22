@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/voice_control_bg"
+    android:layout_width="@dimen/voice_control_dialog_width"
+    android:layout_height="@dimen/voice_control_dialog_height">
+    <ImageView
+        android:id="@+id/voice_mute"
+        android:visibility="invisible"
+        android:layout_width="@dimen/voice_control_img_width"
+        android:layout_height="@dimen/voice_control_img_height"
+        android:src="@drawable/vedio_sound_mute"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/voice_dialog_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/voice_normal"
+        android:layout_width="@dimen/voice_control_img_width"
+        android:layout_height="@dimen/voice_control_img_height"
+        android:src="@drawable/video_sound_normal"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/voice_dialog_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ProgressBar
+        android:id="@+id/voice_dialog_progress"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/play_control_progress_height"
+        android:progressDrawable="@drawable/play_control_progressbar"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/play_control_progress_marigin_start"
+        android:layout_marginEnd="@dimen/play_control_progress_marigin_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voice_normal"
+        style="?android:attr/progressBarStyleHorizontal"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

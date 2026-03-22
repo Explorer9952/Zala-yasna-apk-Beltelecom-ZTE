@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="abc_config_activityDefaultDur">220</integer>
+    <integer name="abc_config_activityShortDur">150</integer>
+    <integer name="animation_default_duration">300</integer>
+    <integer name="cancel_button_image_alpha">127</integer>
+    <integer name="com_vk_sdk_AppId">7161881</integer>
+    <integer name="config_tooltipAnimTime">150</integer>
+    <integer name="default_blur_radius">15</integer>
+    <integer name="default_downsample_factor">8</integer>
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+</resources>

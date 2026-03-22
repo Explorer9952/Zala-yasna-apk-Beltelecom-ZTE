@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin" skin:enable="true">
+    <solid
+        android:color="@color/movie_spisodeitem_normal_bg"
+        skin:enable="true"/>
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/movie_spisodeitem_normal_bg"
+        skin:enable="true"/>
+    <corners
+        android:topLeftRadius="2dp"
+        android:topRightRadius="2dp"
+        android:bottomLeftRadius="2dp"
+        android:bottomRightRadius="2dp"/>
+</shape>

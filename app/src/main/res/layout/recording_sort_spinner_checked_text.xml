@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="@dimen/recordings_sort_spinner_height">
+    <ImageView
+        android:id="@+id/spinner_img"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/remote_stb_select_arrow_normal"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/recording_sort_text_unselect"
+        android:gravity="end|center_vertical"
+        android:id="@+id/spinner_title_txt"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:maxLines="1"
+        android:paddingEnd="10dp"
+        android:layout_toStartOf="@+id/spinner_img"/>
+</RelativeLayout>

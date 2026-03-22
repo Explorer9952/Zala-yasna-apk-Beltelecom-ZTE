@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false">
+    <solid android:color="@color/transparent"/>
+    <stroke
+        android:width="1.2dp"
+        android:color="@color/date_backgroud_color"/>
+    <corners android:radius="360dp"/>
+    <padding
+        android:left="1.5dp"
+        android:top="1.5dp"
+        android:right="1.5dp"
+        android:bottom="1.5dp"/>
+    <size
+        android:height="13dp"
+        android:width="13dp"/>
+</shape>

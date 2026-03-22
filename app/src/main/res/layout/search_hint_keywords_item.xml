@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/hint_item"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@color/search_most_color"
+            android:id="@+id/search_hint_txt"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            skin:enable="true"/>
+    </RelativeLayout>
+</LinearLayout>

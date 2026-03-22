@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    skin:enable="true">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:id="@+id/rl_series_episode_hlvew_txtvew_item"
+        android:background="@drawable/episode_item_bg"
+        android:layout_width="55dp"
+        android:layout_height="55dp">
+        <TextView
+            android:textSize="@dimen/common_18_px"
+            android:textStyle="normal"
+            android:textColor="@color/movie_serieslist_number_textcolor"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@+id/detail_series_episode_hlvew_txtvew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            skin:enable="true"/>
+    </RelativeLayout>
+</LinearLayout>

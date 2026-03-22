@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zte.iptvclient.android.common.player.multiplay.VDHLayout
+        android:orientation="vertical"
+        android:id="@+id/multi_play_container"
+        android:background="@drawable/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/multi_play_control_layout"/>
+    <include layout="@layout/multi_play_program_manager_layout"/>
+    <FrameLayout
+        android:id="@+id/base_container_test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

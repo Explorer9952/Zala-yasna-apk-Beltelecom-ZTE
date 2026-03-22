@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="103dp">
+    <FrameLayout
+        android:id="@+id/item_container"
+        android:background="@color/column_sort_bg"
+        android:layout_width="160dp"
+        android:layout_height="103dp"
+        android:layout_centerHorizontal="true"
+        skin:enable="true">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/icon_img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/icon_sort_default"
+                skin:enable="true"/>
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@color/column_sort_channel_name"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/name_tv"
+                android:layout_width="65dp"
+                android:layout_height="17dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                skin:enable="true"/>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="header_search_bg_color_small">#555555</color>
+    <color name="home_topnavbar_bg">#003a4348</color>
+    <color name="home_topnavbar_defaultsearh_textcolor">#3a4347</color>
+    <color name="home_topnavbar_moresearch_textcolor">#ffffff</color>
+    <color name="magic_indicator_layout_bg">#00000000</color>
+    <color name="multiplayer_date_selected">#a7a7a7</color>
+    <color name="multiplayer_theme_dividerline_light">#7d8184</color>
+    <color name="search_box_entrance_bg">#585858</color>
+    <color name="search_clearhistory_textcolor">#666666</color>
+    <color name="search_nav_header">@color/transparent</color>
+    <color name="search_top_bg">@color/transparent</color>
+    <color name="tc_date_textcolor">#e9efff</color>
+    <color name="top_nav_bar_search_bg">#f3f3f5</color>
+    <color name="tv_column_name_un_select_color">#ffffff</color>
+    <color name="tv_date_bg">#333333</color>
+    <color name="vod_pagerindicator_bg">#3a4347</color>
+</resources>

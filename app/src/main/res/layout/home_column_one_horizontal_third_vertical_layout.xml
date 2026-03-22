@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:id="@+id/commend_columns_view"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:background="@color/home_separation_line_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        skin:enable="true"/>
+    <include layout="@layout/pct_common_head_view_layout"/>
+    <RelativeLayout
+        android:id="@+id/rl_rv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_dynamic_column_videos_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"/>
+    </RelativeLayout>
+    <include layout="@layout/common_more_switch_view_layout"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/sign_up_web_rlayout"
+    android:background="@color/white"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <WebView
+        android:id="@+id/signUpWebview"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layerType="software"/>
+    <ProgressBar
+        android:id="@+id/signUpWebProgress"
+        android:visibility="gone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        style="@android:style/Widget.ProgressBar.Large.Inverse"/>
+</RelativeLayout>

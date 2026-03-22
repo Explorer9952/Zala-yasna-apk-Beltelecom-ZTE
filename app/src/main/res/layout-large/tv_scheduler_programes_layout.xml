@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:layout_gravity="center_vertical"
+        android:id="@+id/hlv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"/>
+    <View
+        android:id="@+id/rl_bottom_line"
+        android:background="@color/multiplayer_theme_dividerline_light"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        skin:enable="true"/>
+    <include layout="@layout/tv_play_nowitem"/>
+    <include layout="@layout/ll_today_emptytv_layout"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_gravity="center"
+        android:id="@+id/program_view_vpager"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="35dp"/>
+</LinearLayout>

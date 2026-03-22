@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_float_player_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/player_loading_float_window"/>
+    <RelativeLayout
+        android:id="@+id/rlayout_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/WHITE"
+        android:gravity="center_horizontal"
+        android:id="@+id/txtvew_order_hint"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"/>
+    <ProgressBar
+        android:id="@+id/bar_loading"
+        android:background="@color/black_old"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyleLarge"/>
+    <include layout="@layout/play_network_hint_floating"/>
+    <ImageView
+        android:id="@+id/btn_dismiss"
+        android:padding="7dp"
+        android:visibility="gone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/float_play_close"/>
+    <TextView
+        android:textColor="@android:color/white"
+        android:id="@+id/txt_ad_hint"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/btn_dismiss"/>
+    <TextView
+        android:textColor="#c0c7cd"
+        android:id="@+id/txt_ad_timer"
+        android:background="@color/dark_gray"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

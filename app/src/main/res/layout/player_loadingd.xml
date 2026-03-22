@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/rl_loadingd"
+    android:background="@drawable/bg_palybegin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img_lose_loading"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ng_videoclose"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:id="@+id/iv_player_loading_up"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:src="@drawable/bg_palybegin_loading_up"
+        android:layout_above="@+id/iv_player_loadingd"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/iv_player_loadingd"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/iv_player_loading_down"
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:src="@drawable/bg_palybegin_loading_down"
+        android:layout_below="@+id/iv_player_loadingd"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

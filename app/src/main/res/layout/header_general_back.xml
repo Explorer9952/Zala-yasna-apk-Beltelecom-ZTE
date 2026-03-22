@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/title_rlayout"
+    android:background="@color/mine_message_title_bg"
+    android:layout_width="match_parent"
+    android:layout_height="63dp"
+    skin:enable="true">
+    <Button
+        android:id="@+id/btn_back"
+        android:background="@drawable/title_back_bg"
+        android:layout_width="43dp"
+        android:layout_height="52dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="0dp"
+        android:layout_alignParentStart="true"
+        skin:enable="true"/>
+    <TextView
+        android:textSize="23sp"
+        android:textColor="@color/mine_message_title_textcolor"
+        android:id="@+id/title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        skin:enable="true"/>
+    <ImageView
+        android:id="@+id/header_bottom_line"
+        android:background="@color/mine_message_separateline_color"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        skin:enable="true"/>
+</RelativeLayout>

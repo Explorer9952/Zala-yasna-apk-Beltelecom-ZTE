@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:id="@+id/ll_program"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/top_line"
+        android:background="@color/multiplayer_theme_dividerline_light"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        skin:enable="true"/>
+    <include layout="@layout/multiscreen_program_edit"/>
+    <View
+        android:id="@+id/bottom_line"
+        android:background="@color/multiplayer_theme_dividerline_light"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        skin:enable="true"/>
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ll_add_window"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/img_add"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/multiscreen_add_grey"
+            skin:enable="true"/>
+        <TextView
+            android:textSize="18dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/txt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:layout_marginStart="20dp"
+            skin:enable="true"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_rewind"
+    android:background="@drawable/start_over_bg"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_centerVertical="true"
+    android:layout_marginEnd="20dp"
+    android:layout_alignParentEnd="true">
+    <ImageView
+        android:id="@+id/iv_start_over"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/start_over"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2dp"/>
+    <TextView
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:id="@+id/txt_start_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/iv_start_over"/>
+</RelativeLayout>

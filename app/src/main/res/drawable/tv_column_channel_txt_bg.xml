@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin" skin:enable="true">
+    <solid
+        android:color="@color/search_history_tab_bg"
+        skin:enable="true"/>
+    <stroke android:color="@color/search_history_tab_bg"/>
+    <corners android:radius="0dp"/>
+</shape>

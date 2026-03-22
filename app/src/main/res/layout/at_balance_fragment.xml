@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/mine_feedback_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/top"
+        android:background="@color/mine_setting_status_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <include layout="@layout/common_header_level_two"/>
+    <LinearLayout
+        android:background="@color/account_button_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@color/column_sort_hint_textcolor"
+            android:id="@+id/txt_display"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"/>
+    </LinearLayout>
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/recording_delete_text"
+        android:id="@+id/txt_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

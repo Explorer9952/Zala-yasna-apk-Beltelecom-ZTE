@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:id="@+id/most_searched_llayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_search_mosted_text"
+        android:background="@color/search_history_tab_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        skin:enable="true">
+        <TextView
+            android:textSize="14dp"
+            android:textColor="@color/search_history_textcolor"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/most_searched_des_txt"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:drawSelectorOnTop="false"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            skin:enable="true"/>
+    </LinearLayout>
+    <com.zte.iptvclient.android.common.customview.viewgroup.gridview.LineGridView
+        android:id="@+id/most_searched_lv"
+        android:fadingEdge="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@drawable/transparent"
+        android:numColumns="1"
+        android:divider="@color/search_history_grideviewdivide_bg"
+        android:dividerHeight="0.5px"
+        skin:enable="true"/>
+    <View
+        android:id="@+id/hot_buttom_line"
+        android:background="@color/search_history_grideviewdivide_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        skin:enable="true"/>
+</LinearLayout>

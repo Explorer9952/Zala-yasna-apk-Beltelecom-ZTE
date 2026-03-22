@@ -1,0 +1,41 @@
+package kotlin.coroutines.intrinsics;
+
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.h;
+import kotlin.jvm.b.l;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+/* compiled from: IntrinsicsJvm.kt */
+/* loaded from: classes2.dex */
+public final class IntrinsicsKt__IntrinsicsJvmKt$createCoroutineFromSuspendFunction$2 extends ContinuationImpl {
+    final /* synthetic */ l $block;
+    final /* synthetic */ kotlin.coroutines.a $completion;
+    final /* synthetic */ kotlin.coroutines.c $context;
+    private int label;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public IntrinsicsKt__IntrinsicsJvmKt$createCoroutineFromSuspendFunction$2(l lVar, kotlin.coroutines.a aVar, kotlin.coroutines.c cVar, kotlin.coroutines.a aVar2, kotlin.coroutines.c cVar2) {
+        super(aVar2, cVar2);
+        this.$block = lVar;
+        this.$completion = aVar;
+        this.$context = cVar;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    @Nullable
+    protected Object invokeSuspend(@NotNull Object obj) {
+        int i = this.label;
+        if (i == 0) {
+            this.label = 1;
+            h.a(obj);
+            return this.$block.invoke(this);
+        }
+        if (i == 1) {
+            this.label = 2;
+            h.a(obj);
+            return obj;
+        }
+        throw new IllegalStateException("This coroutine had already completed".toString());
+    }
+}

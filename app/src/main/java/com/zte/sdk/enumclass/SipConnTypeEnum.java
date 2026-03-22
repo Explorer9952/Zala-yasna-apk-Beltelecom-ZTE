@@ -1,0 +1,39 @@
+package com.zte.sdk.enumclass;
+
+/* loaded from: classes2.dex */
+public enum SipConnTypeEnum {
+    UDP(0, "UDP"),
+    TCP(1, "TCP"),
+    TLS(2, "TLS"),
+    UNKOWN(99, "UNKOWN");
+
+    private int code;
+    private String value;
+
+    SipConnTypeEnum(int i, String str) {
+        this.value = "";
+        this.code = 0;
+        this.code = i;
+        this.value = str;
+    }
+
+    public static SipConnTypeEnum init(int i) {
+        return i == UDP.getCode() ? UDP : i == TCP.getCode() ? TCP : i == TLS.getCode() ? TLS : UNKOWN;
+    }
+
+    public final int getCode() {
+        return this.code;
+    }
+
+    public final String getValue() {
+        return this.value;
+    }
+
+    public final void setCode(int i) {
+        this.code = i;
+    }
+
+    public final void setValue(String str) {
+        this.value = str;
+    }
+}

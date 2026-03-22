@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    skin:enable="true">
+    <TextView
+        android:textSize="19sp"
+        android:textStyle="normal"
+        android:textColor="@color/movie_episode_navbar_textcolr"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:id="@+id/detail_series_episode_nav_txtvew"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        skin:enable="true"/>
+</LinearLayout>

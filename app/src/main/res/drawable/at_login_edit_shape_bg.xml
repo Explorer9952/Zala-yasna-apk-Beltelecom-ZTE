@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin" skin:enable="true">
+    <solid
+        android:color="@color/dialog_btn_txt_bg"
+        skin:enable="true"/>
+    <stroke
+        android:width="1.3dp"
+        android:color="@color/person_bg"
+        skin:enable="true"/>
+    <corners android:radius="3dp"/>
+</shape>

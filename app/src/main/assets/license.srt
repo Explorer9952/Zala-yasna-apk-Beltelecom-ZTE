@@ -1,0 +1,3 @@
+[LICENSE]
+LicenseString=80lUBGgOjH8a1puQfPD7yg==
+ExpirationDate=hQNa1Ul1o5J7FfEUfuHaSw==

@@ -1,0 +1,27 @@
+package com.sina.weibo.sdk.api.share;
+
+import android.os.Bundle;
+import com.sina.weibo.sdk.constant.WBConstants;
+
+/* loaded from: classes.dex */
+public abstract class BaseResponse extends Base {
+    public int errCode;
+    public String errMsg;
+    public String reqPackageName;
+
+    @Override // com.sina.weibo.sdk.api.share.Base
+    public void fromBundle(Bundle bundle) {
+        this.errCode = bundle.getInt(WBConstants.Response.ERRCODE);
+        this.errMsg = bundle.getString(WBConstants.Response.ERRMSG);
+        this.transaction = bundle.getString(WBConstants.TRAN);
+        this.reqPackageName = bundle.getString(WBConstants.Base.APP_PKG);
+    }
+
+    @Override // com.sina.weibo.sdk.api.share.Base
+    public void toBundle(Bundle bundle) {
+        bundle.putInt(WBConstants.COMMAND_TYPE_KEY, getType());
+        bundle.putInt(WBConstants.Response.ERRCODE, this.errCode);
+        bundle.putString(WBConstants.Response.ERRMSG, this.errMsg);
+        bundle.putString(WBConstants.TRAN, this.transaction);
+    }
+}

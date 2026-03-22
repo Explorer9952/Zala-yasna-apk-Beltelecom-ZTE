@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_navbar_logo_and_search_total_height">
+        <FrameLayout
+            android:id="@+id/frame_top_navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_navbar_search_layout_height"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:textSize="@dimen/top_navbar_title_textsize"
+            android:textColor="@color/vod_title_hd"
+            android:gravity="center"
+            android:id="@+id/top_navbar_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:layout_toLeftOf="@+id/frame_top_navbar"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/frame_top_navbar"
+            android:layout_alignParentStart="true"
+            skin:enable="true"/>
+    </RelativeLayout>
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magic_indicator"
+        android:background="@color/home_top_status_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_gravity="center"
+        android:id="@+id/video_view_vpager"
+        android:persistentDrawingCache="animation"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:flipInterval="30"
+        android:layout_weight="1"/>
+</LinearLayout>

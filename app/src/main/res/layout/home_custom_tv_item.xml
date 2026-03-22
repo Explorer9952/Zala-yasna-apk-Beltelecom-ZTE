@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/rl_custom_tv_item"
+        android:background="@color/channel_sort_bg"
+        android:layout_width="@dimen/home_tv_icon_width"
+        android:layout_height="@dimen/home_tv_icon_height"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_custom_tv_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/default_video_thumb"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+</RelativeLayout>

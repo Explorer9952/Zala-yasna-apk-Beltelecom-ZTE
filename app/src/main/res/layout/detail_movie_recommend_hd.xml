@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:background="@color/movie_recommendinfo_bg"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    skin:enable="true">
+    <FrameLayout
+        android:id="@+id/fl_recommend_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/movie_recommend_scrollview"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/series_detail_seaon_layout_pad"/>
+                <include layout="@layout/detail_recommed_ifo_layout"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

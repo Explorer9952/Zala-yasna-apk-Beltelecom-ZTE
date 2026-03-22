@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/empty_pull_refresh_view"/>
+            <ListView
+                android:id="@+id/listview_subscribe"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/divider_line_grey"
+                android:dividerHeight="1dp"/>
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

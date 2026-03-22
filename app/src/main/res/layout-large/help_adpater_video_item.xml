@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/helpe_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl_help_video_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp">
+        <TextView
+            android:textSize="18dp"
+            android:textColor="@color/account_name"
+            android:id="@+id/txt_program_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="100dp"
+            android:layout_alignParentStart="true"/>
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/tv_tvod_play_bg"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

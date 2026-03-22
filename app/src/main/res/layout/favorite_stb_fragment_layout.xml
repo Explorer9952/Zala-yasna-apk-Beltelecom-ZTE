@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:background="@color/favorite_listitem_refresh_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    skin:enable="true">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bottom_line">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.zte.iptvclient.android.common.customview.viewgroup.scrollview.ScrollViewEx
+                android:layout_gravity="center"
+                android:id="@+id/scHomeFragmentContent"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/fl_container"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.zte.iptvclient.android.common.customview.viewgroup.scrollview.ScrollViewEx>
+            <include layout="@layout/empty_pull_refresh_view"/>
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_animation_loading"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:src="@drawable/frame_loading_animlist_new"
+            android:layout_centerInParent="true"
+            skin:enable="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/pct_common_head_view_layout"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_rv_custom_tv"
+        android:paddingLeft="@dimen/home_column_videos_rv_padding"
+        android:paddingRight="@dimen/home_column_videos_rv_padding"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/home_column_videos_rv_padding"
+        android:paddingEnd="@dimen/home_column_videos_rv_padding"/>
+</LinearLayout>

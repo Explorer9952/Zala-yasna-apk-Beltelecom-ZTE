@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zte.iptvclient.android.common.customview.viewgroup.layout.relativelayout.SlideRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_Layout_PlayerFragment"
+    android:background="@drawable/black"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <SurfaceView
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+    <com.zte.iptvclient.android.common.customview.viewgroup.layout.relativelayout.SlideRelativeLayout
+        android:id="@+id/rlayout_player"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/radio_player_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+    <RelativeLayout
+        android:id="@+id/rl_contral_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_blackout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/iv_blackout"
+                android:background="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+            <ImageView
+                android:id="@+id/screen_channel"
+                android:paddingTop="@dimen/player_fullscreen_title_padding_top"
+                android:focusable="true"
+                android:visibility="gone"
+                android:clickable="true"
+                android:layout_width="@dimen/player_fullscreen_icon_width"
+                android:layout_height="@dimen/player_fullscreen_icon_height"
+                android:src="@drawable/player_more_meun"
+                android:scaleType="fitCenter"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginStart="@dimen/player_fullscreen_icon_exit_margin_start"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <include layout="@layout/layout_player_advertisement"/>
+        <include layout="@layout/layout_rl_rewind"/>
+        <include layout="@layout/play_full_screen_control"/>
+        <include layout="@layout/play_small_screen_control"/>
+        <include layout="@layout/gesture_help_layout"/>
+        <include layout="@layout/play_preview_order_hint"/>
+        <include layout="@layout/blackout_skip_layout"/>
+        <include layout="@layout/play_trailer_error"/>
+        <ImageView
+            android:id="@+id/img_content_rank"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <include layout="@layout/play_error_hint"/>
+        <include layout="@layout/play_end_hint"/>
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/bar_loading"
+        android:visibility="gone"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:indeterminateDrawable="@drawable/player_progressbar_drawable"
+        android:indeterminateDuration="1700"
+        android:layout_centerInParent="true"/>
+    <ViewStub
+        android:id="@+id/vewstub_screen_interacton"
+        android:layout="@layout/push_to_tv_play_t"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/tv_full_screen_channel_list_layout"/>
+    <include layout="@layout/play_network_hint"/>
+    <include layout="@layout/play_tip_txt_layout"/>
+    <include layout="@layout/suspendwindow_control_layout"/>
+    <ImageView
+        android:id="@+id/btn_full_screen_uncommon_exit"
+        android:visibility="invisible"
+        android:layout_width="@dimen/player_fullscreen_icon_exit_width"
+        android:layout_height="@dimen/player_fullscreen_icon_exit_height"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/player_exit_style"
+        android:scaleType="center"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/player_fullscreen_icon_exit_margin_start"/>
+    <include layout="@layout/multi_play_program_manager_layout"/>
+    <include layout="@layout/player_loading"/>
+    <ImageView
+        android:id="@+id/ivi_megogo_pic"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ivi_before_content_playing"
+        android:scaleType="centerCrop"/>
+</com.zte.iptvclient.android.common.customview.viewgroup.layout.relativelayout.SlideRelativeLayout>

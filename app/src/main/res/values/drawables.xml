@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="black">#000000</drawable>
+    <drawable name="notification_template_icon_bg">#3333b5e5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+    <drawable name="transparent">#00000000</drawable>
+    <drawable name="transparent_old">#00000000</drawable>
+    <drawable name="white_new">#ffffff</drawable>
+</resources>

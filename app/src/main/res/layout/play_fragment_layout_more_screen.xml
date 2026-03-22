@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayoutPlayerFragment"
+    android:background="@drawable/bg_palybegin"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rlayout_player"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/play_preview_order_hint"/>
+        <include layout="@layout/play_full_screen_control"/>
+        <include layout="@layout/play_small_screen_control_more_screen"/>
+        <include layout="@layout/play_login_hint"/>
+        <include layout="@layout/play_end_hint"/>
+    </RelativeLayout>
+    <ViewStub
+        android:id="@+id/vewstub_screen_interacton"
+        android:layout="@layout/push_to_tv_play"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/gesture_help_layout"/>
+    <include layout="@layout/tv_full_screen_channel_list_layout"/>
+    <include layout="@layout/player_loadingd"/>
+    <include layout="@layout/multi_play_program_manager_layout_for_single"/>
+    <ImageView
+        android:id="@+id/img_mosaic_default"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mosaic_default_thumbnail_4_big"
+        android:scaleType="fitXY"/>
+</RelativeLayout>

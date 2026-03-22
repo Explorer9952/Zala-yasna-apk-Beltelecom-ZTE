@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="horizontal"
+    android:id="@+id/ll_search_history_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/search_recentrecord_textcolor"
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/search_history_txt01"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:maxLines="1"
+        android:layout_marginStart="20dp"
+        skin:enable="true"/>
+</LinearLayout>

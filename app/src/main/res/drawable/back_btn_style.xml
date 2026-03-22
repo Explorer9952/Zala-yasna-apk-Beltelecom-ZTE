@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin" skin:enable="true">
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/btn_play_back"
+        skin:enable="true"/>
+    <item
+        android:state_focused="true"
+        android:drawable="@drawable/btn_play_back"
+        skin:enable="true"/>
+    <item
+        android:state_focused="false"
+        android:drawable="@drawable/btn_play_back"
+        skin:enable="true"/>
+    <item
+        android:drawable="@drawable/btn_play_back"
+        skin:enable="true"/>
+</selector>

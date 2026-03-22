@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    skin:enable="true">
+    <TextView
+        android:id="@+id/top"
+        style="@style/top_bar"
+        skin:enable="true"/>
+    <include layout="@layout/common_header_level_two"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:background="@drawable/bg_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <include layout="@layout/empty_pull_filter_view"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_video"
+                    android:background="@color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    skin:enable="true"/>
+            </RelativeLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        <RelativeLayout
+            android:id="@+id/filter_result_title"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <RelativeLayout
+                android:id="@+id/filter_result_bg"
+                android:background="@color/video_more_filter_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                skin:enable="true"/>
+            <TextView
+                android:textSize="18sp"
+                android:textColor="@color/video_more_title_textcolor"
+                android:gravity="center"
+                android:id="@+id/filter_result_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                skin:enable="true"/>
+            <ImageView
+                android:id="@+id/img_filter_result"
+                android:background="@drawable/filter_arrow"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/filter_result_text"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/filter_result_text"
+                skin:enable="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/rl_empty"
+    android:background="@color/common_refresh_bg"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="110dp"
+    skin:enable="true">
+    <ImageView
+        android:id="@+id/refresh_image"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_empty"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_centerInParent="true"
+        skin:enable="true"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/ll_pullrefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/refresh_image">
+        <ImageView
+            android:id="@+id/img_pullrefresh_icon"
+            android:background="@drawable/icon_empty_refresh"
+            android:visibility="gone"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            skin:enable="true"/>
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@color/home_recommendtab_refreshtext_textcolor"
+            android:id="@+id/txt_pullrefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            skin:enable="true"/>
+    </LinearLayout>
+</RelativeLayout>

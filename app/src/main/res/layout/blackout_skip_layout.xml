@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:id="@+id/rl_skip_blackout"
+    android:background="@drawable/shape_round_rec"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_marginBottom="40dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true">
+    <ImageView
+        android:id="@+id/iv_skip_blackout"
+        android:layout_width="18dp"
+        android:layout_height="15dp"
+        android:src="@drawable/icon_blackout_skip"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"/>
+    <TextView
+        android:textSize="14dp"
+        android:id="@+id/txt_skip_blackout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/iv_skip_blackout"/>
+</RelativeLayout>

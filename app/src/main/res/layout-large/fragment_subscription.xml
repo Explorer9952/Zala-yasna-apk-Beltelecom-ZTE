@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:background="@drawable/bg_pad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    skin:enable="true">
+    <TextView
+        android:id="@+id/top"
+        style="@style/top_bar"
+        skin:enable="true"/>
+    <include layout="@layout/common_header_level_two"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        skin:enable="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/empty_pull_refresh_view"/>
+            <ExpandableListView
+                android:id="@+id/expandableHListView_subscription"
+                android:background="@color/mine_order_subscription_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transcriptMode="normal"
+                android:cacheColorHint="@android:color/transparent"
+                android:groupIndicator="@null"
+                android:divider="@null"
+                skin:enable="true"/>
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

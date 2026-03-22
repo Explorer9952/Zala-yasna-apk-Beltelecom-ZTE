@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <script type="text/javascript" src="./blowfish.js"></script>
+    <title>challenge</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    
+    
+   function jsTest(jsonParams){
+
+       return jsonParams;
+   }
+
+   function jsMethod(jsonParams){
+        var k = jsonParams.k;
+        var k1 = jsonParams.k1;
+        var k2 = jsonParams.k2;
+        var data = jsonParams.data;
+        var BS = 8;
+        var BF_K = new Blowfish();
+        var K = [];
+        for(var i = 0; i < 32; i += 2){
+            K.push(parseInt(k.slice(i, i + 2), 16));
+        };
+        BF_K.init(K);
+
+        var K1 = [];
+        var K2 = [];
+        for(var i = 0; i < 16; i += 2){
+            K1.push(parseInt(k1.slice(i, i + 2), 16));
+            K2.push(parseInt(k2.slice(i, i + 2), 16));
+        };
+        
+        var prev = [0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0];
+                   var last_i;
+                   var chunk;
+                   var chunk_raw;
+                   var n;
+                   var ciphertext;
+                   var k;
+                   if(data.length % BS == 0){
+                       last_i = data.length - BS;
+                   } else {
+                       last_i = data.length - (data.length % BS);
+                   };
+                   for(var i = 0; i < last_i; i += BS){
+                       chunk_raw = data.slice(i, i + BS);
+                       chunk = [];
+                       for(n = 0; n < chunk_raw.length; n++){
+                           chunk.push(chunk_raw.charCodeAt(n) ^ prev[n]);
+                       };
+                       ciphertext = BF_K.encrypt_block(chunk);
+                       prev = [
+                           ciphertext[3], ciphertext[2], ciphertext[1], ciphertext[0],
+                           ciphertext[7], ciphertext[6], ciphertext[5], ciphertext[4],
+                       ];
+                   };
+                   var last = data.slice(last_i);
+                   if(last.length == BS){
+                       k = K1;
+                   } else {
+                       k = K2;
+                       last += '\x80';
+                       for(n = 0; n < BS - last.length; n++){
+                           last += '\x00';
+                       };
+                   };
+                   var tag = [];
+                   for(n = 0; n < BS; n++){
+                       tag.push(last.charCodeAt(n) ^ prev[n] ^ k[n]);
+                   };
+                   var result = BF_K.encrypt_block(tag);
+                   result = [
+                       result[3], result[2], result[1], result[0],
+                       result[7], result[6], result[5], result[4],
+                   ];
+                   var result_hex = "";
+                   for(n = 0; n < result.length; n++){
+                       i = result[n].toString(16);
+                       if(i.length == 1){
+                           i = "0" + i;
+                       };
+                       result_hex += i;
+                   };
+        return result_hex;
+   }
+
+
+ 
+ // 测试用
+ /*
+ setupWebViewJavascriptBridge(function(bridge) {
+                 bridge.registerHandler('testJSFunction', function(data, responseCallback) {
+                    alert('JS方法被调用:'+data);
+                    responseCallback('js执行过了');
+                 })
+            })
+
+    */
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/detail_tv_function_menu"/>
+    <View
+        android:id="@+id/tag_function_menu_line"
+        android:background="@color/multiplayer_theme_dividerline_light"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"/>
+    <include layout="@layout/tv_column_menu_layout"/>
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:layout_gravity="center_vertical"
+        android:id="@+id/hlv_date"
+        android:background="@color/alert_title_color"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"/>
+    <View
+        android:id="@+id/rl_bottom_line"
+        android:background="@color/multiplayer_theme_dividerline_light"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/middle_line"
+            android:background="@color/multiplayer_theme_dividerline_light"
+            android:layout_width="0.5px"
+            android:layout_height="match_parent"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/channel_list"
+            android:layout_width="99dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/tvplay_nowitem"/>
+            <include layout="@layout/emptytv_layout"/>
+            <androidx.viewpager.widget.ViewPager
+                android:layout_gravity="center"
+                android:id="@+id/program_view_vpager"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/multiscreen_program"/>
+</LinearLayout>

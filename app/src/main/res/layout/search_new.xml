@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    skin:enable="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/top"
+            android:background="@color/search_status_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            skin:enable="true"/>
+        <include layout="@layout/header_search_back"/>
+        <include layout="@layout/rl_search_layout"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_multiscreen_program_edit_view"
+        android:background="@color/search_bg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_alignParentBottom="true"
+        android:paddingEnd="2dp"
+        skin:enable="true">
+        <View
+            android:id="@+id/multiscreen_program_edit_view_top"
+            android:background="@color/search_separate_bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            skin:enable="true"/>
+        <include layout="@layout/multiscreen_program_edit"/>
+        <View
+            android:id="@+id/multiscreen_program_edit_view_buttom"
+            android:background="@color/search_separate_bg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            skin:enable="true"/>
+    </LinearLayout>
+</RelativeLayout>

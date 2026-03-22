@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:id="@+id/ll_home_page"
+    android:background="@drawable/bg_phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/top"
+        android:background="@color/transparent"
+        style="@style/top_bar"
+        skin:enable="true"/>
+    <RelativeLayout
+        android:id="@+id/ll_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/frame_top_navbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_navbar_search_layout_height"/>
+        <TextView
+            android:textSize="@dimen/top_navbar_title_textsize"
+            android:textColor="@color/home_topnavbar_moresearch_textcolor"
+            android:gravity="center"
+            android:id="@+id/top_navbar_title_txt"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/top_navbar_logo_margin_start"
+            android:layout_toStartOf="@+id/frame_top_navbar"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/home_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    skin:enable="true">
+    <FrameLayout
+        android:id="@+id/fl_oper_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <include layout="@layout/detail_function_menu"/>
+    </FrameLayout>
+    <ScrollView
+        android:id="@+id/video_detail_scrollv"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_comment">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_phone_indicate_container"
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                skin:enable="true">
+                <View
+                    android:background="@color/movie_separateline_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    skin:enable="true"/>
+                <include layout="@layout/detail_commen_introduction"/>
+                <View
+                    android:id="@+id/separate_line"
+                    android:background="@color/movie_separateline_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    skin:enable="true"/>
+                <include layout="@layout/detail_recommed_ifo_layout"/>
+            </LinearLayout>
+            <FrameLayout
+                android:id="@+id/detail_ifo_layout_container"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </ScrollView>
+    <View
+        android:id="@+id/detail_movie_separate_line"
+        android:background="@color/movie_separateline_color"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        skin:enable="true"/>
+    <FrameLayout
+        android:id="@+id/detail_info_hd"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

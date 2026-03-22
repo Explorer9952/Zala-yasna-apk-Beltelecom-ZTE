@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:background="@color/mine_record_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    skin:enable="true">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include layout="@layout/empty_pull_refresh_view"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/refreshLayout">
+        <ImageView
+            android:id="@+id/img_animation_loading"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:src="@drawable/frame_loading_animlist_new"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:background="@drawable/bg_phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    skin:enable="true">
+    <include
+        android:visibility="gone"
+        layout="@layout/multiscreen_head_title"/>
+    <RelativeLayout
+        android:id="@+id/tv_detail_miniplaye_container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+    <FrameLayout
+        android:id="@+id/fl_channel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <View
+        android:id="@+id/blank_view"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_tabs_height"/>
+</LinearLayout>

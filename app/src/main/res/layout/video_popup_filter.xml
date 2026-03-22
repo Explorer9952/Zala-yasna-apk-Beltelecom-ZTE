@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    skin:enable="true">
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_filter_container"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        skin:enable="true"/>
+    <Button
+        android:textSize="18sp"
+        android:textColor="@color/btn_text_style2"
+        android:gravity="center"
+        android:id="@+id/btn_ok"
+        android:background="@drawable/btn_bg_style"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        skin:enable="true"/>
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <ImageView
+        android:id="@+id/line_bottom"
+        android:background="@color/video_separateline_color"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="20dp"
+        skin:enable="true"/>
+</LinearLayout>

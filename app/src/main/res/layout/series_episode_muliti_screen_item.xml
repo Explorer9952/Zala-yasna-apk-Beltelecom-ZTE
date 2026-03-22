@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:id="@+id/rl_series_episode_gvew_txtvew_item"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+        <TextView
+            android:textSize="19dp"
+            android:textStyle="normal"
+            android:textColor="@color/movie_serieslist_number_textcolor"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:id="@+id/detail_series_episode_gvew_txtvew"
+            android:background="@color/multiplayer_seriesitem_bg"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="10dp"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            skin:enable="true"/>
+        <ImageView
+            android:id="@+id/download_state"
+            android:visibility="visible"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/morescreen_icon_add_vod"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            skin:enable="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="horizontal"
+    android:id="@+id/package_item"
+    android:background="@color/channel_sort_dialog_bg"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <CheckBox
+        android:id="@+id/package_selector"
+        android:background="@drawable/at_checkbox_style"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="26.67dp"
+        android:layout_height="26.67dp"
+        android:button="@null"
+        android:layout_marginStart="30dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp">
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:id="@+id/pacakge_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</LinearLayout>

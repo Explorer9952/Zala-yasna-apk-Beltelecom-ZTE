@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textSize="15dp"
+    android:textColor="@color/recording_sort_text_unselect"
+    android:gravity="end|center_vertical"
+    android:id="@+id/recording_sort_spinner_item_title_txt"
+    android:background="@color/recording_sortline_bg"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:maxLines="1"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"/>

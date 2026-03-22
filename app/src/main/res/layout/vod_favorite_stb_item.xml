@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin"
+    android:orientation="vertical"
+    android:id="@+id/ll_video_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_img"
+        android:layout_width="145dp"
+        android:layout_height="208dp">
+        <ImageView
+            android:id="@+id/poster_img"
+            android:background="@drawable/default_poster_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            skin:enable="true"/>
+        <ImageView
+            android:id="@+id/img_corner"
+            android:visibility="gone"
+            android:layout_width="@dimen/corner_width"
+            android:layout_height="@dimen/corner_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <TextView
+        android:textSize="18sp"
+        android:textColor="@color/vod_programname_textcolor"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:singleLine="true"
+        skin:enable="true"/>
+</LinearLayout>
